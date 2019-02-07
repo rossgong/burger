@@ -1,11 +1,11 @@
-DROP DATABASE IF EXISTS burgers_db;
-CREATE database burgers_db;
+DROP DATABASE IF EXISTS sandwiches_db;
+CREATE database sandwiches_db;
 
-USE burgers_db;
+USE sandwiches_db;
 
-CREATE TABLE burgers (
+CREATE TABLE sandwiches (
     id integer NOT NULL AUTO_INCREMENT,
-    burger_name VARCHAR(100) NOT NULL,
+    sandwhich_name VARCHAR(100) NOT NULL,
     devoured BOOLEAN NOT NULL,
     PRIMARY KEY(id)
 );

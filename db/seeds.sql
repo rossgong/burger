@@ -1,6 +1,6 @@
-USE burgers_db;
+USE sandwiches_db;
 
-INSERT INTO burgers (burger_name, devoured) VALUES
-("The Ross", false),
-("G Burger", false),
-("Is Burger a Sandwhich", false);
+INSERT INTO sandwiches (sandwhich_name, devoured) VALUES
+("Burger", false),
+("Hot Dog", false),
+("Taco", false);

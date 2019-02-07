@@ -1,10 +1,10 @@
 var connection = require('./connection');
 
-var burgerTable = "burgers";
+var sandwichTable = "sandwiches";
 
 module.exports = {
     selectAll: (cb) => {
-        connection.query("SELECT * FROM " + burgerTable, (err, data) => {
+        connection.query("SELECT * FROM " + sandwichTable, (err, data) => {
             if (err) {
                 throw err;
             } else {
@@ -17,7 +17,7 @@ module.exports = {
     insertOne: (row, cb) => {
         if (row.buger_name && row.devoured) {
             connection.query("INSERT INTO ?? VALUES (??, ??) VALUES (?,?)",
-                [burgerTable, "burger_name", "devoured", row.buger_name, row.devoured],
+                [sandwichTable, "sandwich_name", "devoured", row.buger_name, row.devoured],
                 (err, data) => {
                     if (err) {
                         throw err;
@@ -29,19 +29,19 @@ module.exports = {
                     }
                 });
         } else {
-            console.log("ERROR: Data should be formatted with burger_name and devoured");
+            console.log("ERROR: Data should be formatted with sandwich_name and devoured");
         }
     },
 
     updateOne: (id, data, cb) => {
-        if (data.devoured || data.burger_name) {
-            var queryString = connection.format("UPDATE ?? SET ", burgerTable);
+        if (data.devoured || data.sandwich_name) {
+            var queryString = connection.format("UPDATE ?? SET ", sandwichTable);
             if (data.devoured) {
                 queryString += connection.format("??=?,", ["devoured", data.devoured]);
             }
 
-            if (data.burger_name) {
-                queryString += connection.format("??=?,", ["burger_name", data.burger_name]);
+            if (data.sandwich_name) {
+                queryString += connection.format("??=?,", ["sandwich_name", data.sandwich_name]);
             }
 
             queryString = queryString.substring(0, -1);
@@ -55,7 +55,7 @@ module.exports = {
                 }
             });
         } else {
-            console.log("ERROR: Must give either devoured or burger_name to be updated")
+            console.log("ERROR: Must give either devoured or sandwich_name to be updated")
         }
     }
 }

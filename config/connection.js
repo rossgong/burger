@@ -6,7 +6,7 @@ var connection = sql.createConnection({
 
     user: "root",
     password: "root",
-    database: "store"
+    database: "sandwiches_db"
 });
 
 connection.connect(err => {
