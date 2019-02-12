@@ -5,7 +5,7 @@ USE sandwiches_db;
 
 CREATE TABLE sandwiches (
     id integer NOT NULL AUTO_INCREMENT,
-    sandwhich_name VARCHAR(100) NOT NULL,
+    sandwich_name VARCHAR(100) NOT NULL,
     devoured BOOLEAN NOT NULL,
     PRIMARY KEY(id)
 );
