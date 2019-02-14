@@ -1,7 +1,7 @@
 {
-  "name": "14-burger",
+  "name": "sandwiches",
   "version": "1.0.0",
-  "description": "Burger logger",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,17 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rossgong/burger.git"
+    "url": "git+https://github.com/rossgong/sandwiches.git"
   },
-  "keywords": [
-    "burger"
-  ],
   "author": "Ross Gongaware",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rossgong/burger/issues"
+    "url": "https://github.com/rossgong/sandwiches/issues"
   },
-  "homepage": "https://github.com/rossgong/burger#readme",
+  "homepage": "https://github.com/rossgong/sandwiches#readme",
   "dependencies": {
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
