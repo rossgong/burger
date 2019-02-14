@@ -1,5 +1,7 @@
 var express = require("express");
 
+var router = require("./controllers/sandwiches_controller");
+
 var PORT = process.env.PORT || 8080;
 
 var app = express();
@@ -17,15 +19,9 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-app.get("/", function (req, res) {
-    res.render("index", { body: "hi" });
-})
 
-// app.use("/api", apiRoutes);
-// app.use("/", htmlRoutes)
+app.use("/", router);
 
 app.listen(PORT, function () {
-    console.log("Listening on port" + PORT);
+	console.log("Listening on port" + PORT);
 });
-
-
